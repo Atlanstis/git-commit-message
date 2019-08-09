@@ -99,3 +99,17 @@ npm install -D commitizen cz-conventional-changelog
 
 ![演示效果-1](https://github.com/Atlanstis/git-commit-message/blob/master/src/asset/show-1.gif)
 
+## 3. `Commitlint`: 校验你的 message
+
+[[commitlint](https://link.juejin.im?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%3A%2F%2Fgithub.com%2Fmarionebl%2Fcommitlint): 可以帮助我们 lint commit messages, 如果我们提交的不符合指向的规范, 直接拒绝提交, 比较狠.
+
+同样的, 它也需要一份校验的配置, 这里推荐 [@commitlint/config-conventional](https://link.juejin.im?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%3A%2F%2Fgithub.com%2Fmarionebl%2Fcommitlint%2Ftree%2Fmaster%2F%40commitlint%2Fconfig-conventional) (符合 Angular团队规范).
+
+安装:
+
+```
+npm i -D @commitlint/config-conventional @commitlint/cli
+```
+
+同时需要在项目目录下创建配置文件 .commitlintrc.js, 写入:
+

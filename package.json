@@ -19,6 +19,11 @@
     "commit",
     "message"
   ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
   "author": "Gypsophila。",
   "license": "ISC",
   "bugs": {
@@ -26,7 +31,10 @@
   },
   "homepage": "https://github.com/Atlanstis/git-commit-message#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^3.0.2"
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.3"
   }
 }
