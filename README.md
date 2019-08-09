@@ -153,3 +153,11 @@ package.json 中添加:
 },
 ```
 
+
+
+参考资料
+
+[规范你的 commit message 并且根据 commit 自动生成 CHANGELOG.md](https://juejin.im/post/5bd2debfe51d457abc710b57#heading-12)
+
+[优雅的提交你的 Git Commit Message](https://juejin.im/post/5afc5242f265da0b7f44bee4#heading-3)
+
