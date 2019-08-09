@@ -1,0 +1,32 @@
+{
+  "name": "git-commit-message",
+  "version": "1.0.0",
+  "description": "使用工具规范 git 提交信息",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atlanstis/git-commit-message.git"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "message"
+  ],
+  "author": "Gypsophila。",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atlanstis/git-commit-message/issues"
+  },
+  "homepage": "https://github.com/Atlanstis/git-commit-message#readme",
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2"
+  }
+}
