@@ -103,8 +103,6 @@ npm install -D commitizen cz-conventional-changelog
 
 [[commitlint](https://link.juejin.im?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%3A%2F%2Fgithub.com%2Fmarionebl%2Fcommitlint): 可以帮助我们 lint commit messages, 如果我们提交的不符合指向的规范, 直接拒绝提交, 比较狠.
 
-同样的, 它也需要一份校验的配置, 这里推荐 [@commitlint/config-conventional](https://link.juejin.im?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%3A%2F%2Fgithub.com%2Fmarionebl%2Fcommitlint%2Ftree%2Fmaster%2F%40commitlint%2Fconfig-conventional) (符合 Angular团队规范).
-
 安装:
 
 ```
@@ -112,4 +110,46 @@ npm i -D @commitlint/config-conventional @commitlint/cli
 ```
 
 同时需要在项目目录下创建配置文件 .commitlintrc.js, 写入:
+
+```
+module.exports = {
+  extends: [
+    "@commitlint/config-conventional"
+  ],
+  rules: {
+    'type-enum': [2, 'always', [
+      'feat', 'fix', 'refactor', 'docs', 'chore', 'style', 'test'
+     ]],
+    'type-case': [0],
+    'type-empty': [0],
+    'scope-empty': [0],
+    'scope-case': [0],
+    'subject-full-stop': [0, 'never'],
+    'subject-case': [0, 'never'],
+    'header-max-length': [0, 'always', 72]
+  }
+};
+```
+
+[rule配置说明](https://marionebl.github.io/commitlint/#/reference-rules):：rule由name和配置数组组成，如：`'name:[0, 'always', 72]'`，数组中第一位为level，可选`0,1,2`，0为disable，1为warning，2为error，第二位为应用与否，可选`always|never`，第三位该rule的值。
+
+## 4. 结合 `Husky`
+
+校验 commit message 的最佳方式是结合 git hook, 所以需要配合 [Husky](https://link.juejin.im/?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%3A%2F%2Fgithub.com%2Ftypicode%2Fhusky).
+
+安装
+
+```
+npm install husky --save-dev
+```
+
+package.json 中添加:
+
+```
+"husky": {
+  "hooks": {
+    "commit-msg": "commitlint -e $GIT_PARAMS"
+  }
+},
+```
 
