@@ -97,3 +97,5 @@ npm install -D commitizen cz-conventional-changelog
 
 在对应项目中使用 `npm run commit` 即可。
 
+![演示效果-1](https://github.com/Atlanstis/git-commit-message/blob/master/src/asset/show-1.gif)
+
