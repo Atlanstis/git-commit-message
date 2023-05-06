@@ -31,9 +31,9 @@
   },
   "homepage": "https://github.com/Atlanstis/git-commit-message#readme",
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
+    "@commitlint/cli": "^8.3.6",
     "@commitlint/config-conventional": "^8.1.0",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.3"
   }
